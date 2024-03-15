@@ -1,0 +1,93 @@
+#include <stdio.h>
+
+int main()
+{
+    // USAR NOMES COM 4 LETRAS PORFAVOR PARA A TABELA NAO FICAR TORTA :)
+    // PODE USAR NOTAS COM (.) EX:5.5
+    
+    //ALUNO1
+    char nomeAluno1[8];
+    float prova1A1;
+    float prova2A1;
+    char resultado1[8];
+    
+    //ALUNO2
+    char nomeAluno2[8];
+    float prova1A2;
+    float prova2A2;
+    char resultado2[8];
+    
+    //ALUNO3
+    char nomeAluno3[8];
+    float prova1A3;
+    float prova2A3;
+    char resultado3[8];
+    
+    //SCANS E PRINTFS
+    
+    printf("Digite o nome do Aluno 1: ");
+    scanf("%s", nomeAluno1);
+    printf("Digite a nota da prova 1 do Aluno 1: ");
+    scanf("%f", &prova1A1);
+    printf("Digite a nota da prova 2 do Aluno 1: ");
+    scanf("%f", &prova2A1);
+    printf("\n");
+    
+    printf("Digite o nome do Aluno 2: ");
+    scanf("%s", nomeAluno2);
+    printf("Digite a nota da prova 1 do Aluno 2: ");
+    scanf("%f", &prova1A2);
+    printf("Digite a nota da prova 2 do Aluno 2: ");
+    scanf("%f", &prova2A2);
+    printf("\n");
+    
+    printf("Digite o nome do Aluno 3: ");
+    scanf("%s", nomeAluno3);
+    printf("Digite a nota da prova 1 do Aluno 3: ");
+    scanf("%f", &prova1A3);
+    printf("Digite a nota da prova 2 do Aluno 3: ");
+    scanf("%f", &prova2A3);
+    
+    //MEDIAS
+    
+    float mediaA1 = (prova1A1 + prova2A1) / 2;
+    float mediaA2 = (prova1A2 + prova2A2) / 2;
+    float mediaA3 = (prova1A3 + prova2A3) / 2;
+    
+    //APROVADOS  MEDIA>= 6.0
+    
+    if (mediaA1 >= 6.0) {
+        sprintf(resultado1, "SIM");
+    } else {
+        sprintf(resultado1, "NAO");
+    }
+    
+      if (mediaA2 >= 6.0) {
+        sprintf(resultado2, "SIM");
+    } else {
+        sprintf(resultado2, "NAO");
+    }
+    
+      if (mediaA3 >= 6.0) {
+        sprintf(resultado3, "SIM");
+    } else {
+        sprintf(resultado3, "NAO");
+    }
+    
+    
+    
+    //TABELA+DADOS
+    printf("\n");
+    printf("             APROVADOS E REPROVADOS             \n");
+    printf("|==============================================|\n");
+    printf("| # |  NOME  |  P1  |  P2  | MEDIA | APROVADOS |\n");
+    printf("|==============================================|\n");
+    printf("| 1 |  %s  |  %.1f |  %.1f |  %.1f  |    %s    |\n", nomeAluno1, prova1A1, prova2A1, mediaA1, resultado1);
+    printf("|----------------------------------------------|\n");
+    printf("| 2 |  %s  |  %.1f |  %.1f |  %.1f  |    %s    |\n", nomeAluno2, prova1A2, prova2A2, mediaA2, resultado2);
+    printf("|----------------------------------------------|\n");
+    printf("| 3 |  %s  |  %.1f |  %.1f |  %.1f  |    %s    |\n", nomeAluno3, prova1A3, prova2A3, mediaA3, resultado3);
+    printf("|==============================================|\n");
+   
+    return 0;
+}
